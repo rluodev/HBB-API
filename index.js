@@ -104,7 +104,7 @@ app.get('//v1/unauthed', (req, res) => {
 });
 
 app.get('//v1/unauthed/subscribe/webhook', async (req, res) => {
-    const response = await fetch('https://api.airtable.com/v0/appYlvRWZObGXXGOh/Emails?maxRecords=3&view=Grid%20view&sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc&maxRecords=100&pageSize=100', {
+    const response = await fetch('https://api.airtable.com/v0/tblqroLcEaTDlhdtc/Emails?maxRecords=3&view=Grid%20view&sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc&maxRecords=100&pageSize=100', {
         headers: {
             Authorization: 'Bearer ' + process.env.AIRTABLE_KEY
         }
@@ -117,7 +117,7 @@ app.get('//v1/unauthed/subscribe/webhook', async (req, res) => {
         try {
             await send({ email }, config.messages.subscribe);
             emailsSent += 1;
-            const output = await fetch('https://api.airtable.com/v0/appYlvRWZObGXXGOh/Emails', {
+            const output = await fetch('https://api.airtable.com/v0/tblqroLcEaTDlhdtc/Emails', {
                 method: 'PATCH',
                 headers: {
                     Authorization: 'Bearer ' + process.env.AIRTABLE_KEY,
