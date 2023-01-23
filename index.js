@@ -1,27 +1,27 @@
-/*import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer';
 import express from 'express';
 import dotenv from 'dotenv';
 import crypto from 'crypto';
 import fetch from 'node-fetch';
-import cors from 'cors';*/
-const nodemailer = require('nodemailer')
+import cors from 'cors';
+/*const nodemailer = require('nodemailer')
 const express = require('express')
 const dotenv = require('dotenv')
 const crypto = require('crypto')
 const fetch = require('node-fetch')
-const cors = require('cors')
+const cors = require('cors')*/
 
 dotenv.config(process.env.ENV_PATH ? {path:process.env.ENV_PATH} : undefined)
 
 
-/*import { exec } from 'child_process';
+import { exec } from 'child_process';
 import { runInThisContext } from 'vm';
 import { create } from 'domain';
-import { readdirSync } from 'fs';*/
-const { exec } = require('child_process')
+import { readdirSync } from 'fs';
+/*const { exec } = require('child_process')
 const { runInThisContext } = require('vm')
 const { create } = require('domain')
-const { readdirSync } = require('fs')
+const { readdirSync } = require('fs')*/
 
 const config = {
     accountName: 'HackBackBetter',
@@ -66,7 +66,7 @@ app.get('/', (req, res) => {
 
 app.use('/v1/authed', (req, res, next) => {
     const auth = req.header('Authorization');
-    const valid = auth?.startsWith('Bearer hoc-m-') && ('HOC-M-' + crypto.createHash('sha512').update(auth.substring(13)).digest('hex')).toUpperCase() == process.env.API_KEY_HASH;
+    const valid = auth?.startsWith('Bearer hoc-m-') && ('HOC-M-' + crypto.createHash('sha512').update(auth.substring(13)).digest('hex')).toUpperCase() == 'HOC-M-BF12DDF078949BA5AC196FFF7D63F4EA2EE3065E09C4C1B6C7505C7C991D857E04373731A5E1D02966CF5DD006312FD8CD835BCCCEA3C69881837E2BBB080C83';
     if (!valid) return res.status(401).send('Unauthorized');
     next();
 });
@@ -140,7 +140,7 @@ app.get('/v1/unauthed/subscribe/webhook', async (req, res) => {
 });
 
 app.get('/v1/webhook', (req, res) => {
-    res.redirect(`http://api.hackbackbetter.live/v1/unauthed/subscribe/webhook`);
+    res.redirect(`http://api.hackbackbetter.live/mail/v1/unauthed/subscribe/webhook`);
 });
 
 (async () => {
@@ -152,5 +152,3 @@ app.get('/v1/webhook', (req, res) => {
         console.log(`Listening on *:${process.env.PORT ?? 8081}`);
     });
 })();
-
-module.exports = app
