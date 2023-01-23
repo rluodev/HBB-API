@@ -1,4 +1,5 @@
-import crypto from 'crypto';
+//import crypto from 'crypto';
+const crypto = require('crypto');
 
 const randomBytes = crypto.randomBytes(64).toString('hex');
 const hash = crypto.createHash('sha512').update(randomBytes).digest('hex');
