@@ -130,7 +130,7 @@ app.get('/v1/unauthed/subscribe/webhook', async (req, res) => {
 });
 
 app.get('/v1/webhook', (req, res) => {
-    res.redirect(`http://mail2.hackoc.org:8081/v1/unauthed/subscribe/webhook`);
+    res.redirect(`https://api.hackbackbetter.live/v1/unauthed/subscribe/webhook`);
 });
 
 (async () => {
