@@ -14,15 +14,15 @@ import { create } from 'domain';
 import { readdirSync } from 'fs';
 
 const config = {
-    accountName: 'Hack OC',
-    accountEmail: 'noreply@hackoc.org',
+    accountName: 'HackBackBetter',
+    accountEmail: 'noreply@hackbackbetter.live',
     accountPassword: process.env.EMAIL_PASSWORD,
     mailServer: {
-        host: 'smtp.gmail.com',
+        host: 'mail.hackbackbetter.live',
         post: 465,
         secure: true
     },
-    replyTo: 'team@hackoc.org',
+    replyTo: 'info@hackbackbetter.live',
     messages: {}
 };
 
@@ -51,7 +51,7 @@ app.use(express.json({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hi there! I\'m the Hack OC Mailroom. I power all of our email services, like our mailing list, registrations, vaccine verification, and test verification. I\'m also open source! Check out https://github.com/hackoc/mail.');
+    res.send('Hi there! I\'m the HackBackBetter Mailroom. I power all of our email services, like our mailing list, registrations, and forms verification.');
 });
 
 app.use('/v1/authed', (req, res, next) => {
@@ -130,7 +130,7 @@ app.get('/v1/unauthed/subscribe/webhook', async (req, res) => {
 });
 
 app.get('/v1/webhook', (req, res) => {
-    res.redirect(`http://mail2.hackoc.org:8081/v1/unauthed/subscribe/webhook`);
+    res.redirect(`http://api.hackbackbetter.live/v1/unauthed/subscribe/webhook`);
 });
 
 (async () => {
@@ -142,3 +142,5 @@ app.get('/v1/webhook', (req, res) => {
         console.log(`Listening on *:${process.env.PORT ?? 8081}`);
     });
 })();
+
+module.exports = app
