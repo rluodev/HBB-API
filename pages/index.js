@@ -51,7 +51,7 @@ app.use(express.json({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hi there! I\'m the HackBackBetter Mail API. I power all of our email services, like our mailing list, registrations, and forms verification.');
+    res.send('Hi there! I\'m the HackBackBetter Mail API. I power all of our email services, like our mailing list, registrations, vaccine verification, and test verification.');
 });
 
 app.use('/v1/authed', (req, res, next) => {
