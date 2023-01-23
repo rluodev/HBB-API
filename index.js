@@ -104,6 +104,7 @@ app.get('//v1/unauthed', (req, res) => {
 });
 
 app.get('//v1/unauthed/subscribe/webhook', async (req, res) => {
+    /*
     const response = await fetch('https://api.airtable.com/v0/tblqroLcEaTDlhdtc/Emails?maxRecords=3&view=Grid%20view&sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc&maxRecords=100&pageSize=100', {
         headers: {
             Authorization: 'Bearer ' + process.env.AIRTABLE_KEY
@@ -140,6 +141,8 @@ app.get('//v1/unauthed/subscribe/webhook', async (req, res) => {
         }
     }
     res.send(`${emailsSent} email(s) sent out.`);
+    */
+   res.send("This webhook is not working.");
 });
 
 app.get('//v1/webhook', (req, res) => {

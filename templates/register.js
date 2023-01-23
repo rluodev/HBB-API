@@ -8,14 +8,12 @@ Best,
 Ruien & the HackBackBetter Team
 <br/>
 <br/>
-<br/>
-<br/>
 <a href="https://hackbackbetter.live">
 <img src="https://cdn.hackbackbetter.live/logo-full-light.png" width="100px" />
 </a>
 <br/>
 <br/>
-<small>We value your privacy and we'll never track whether you read or open our emails.</small>`;
+<small>We value your privacy and will never track whether you read or open our emails.</small>`;
 
 export const text = ({ firstName }) => `Thanks for registering, ${firstName}!
 
@@ -23,7 +21,7 @@ We'll reach out to you soon to sign the event liability waiver. In the meantime,
 Best,
 Ruien & the HackBackBetter team
 -----
-We value your privacy and we'll never track whether you read or open our emails.`;
+We value your privacy and will never track whether you read or open our emails.`;
 
 export const subject = () => `Thanks for registering for HackBackBetter 2023!`;
 
