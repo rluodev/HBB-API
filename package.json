@@ -6,5 +6,5 @@
     "node-fetch": "^3.2.10",
     "nodemailer": "^6.9.0"
   },
-  "type": "commonjs"
+  "type": "module"
 }
