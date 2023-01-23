@@ -1,17 +1,17 @@
-import nodemailer from 'nodemailer';
-import express from 'express';
-import dotenv from 'dotenv';
-import crypto from 'crypto';
-import fetch from 'node-fetch';
-import cors from 'cors';
+const nodemailer = require('nodemailer');
+const express = require('express');
+const dotenv = require('dotenv');
+const crypto = require('crypto');
+const fetch = require('node-fetch');
+const cors = require('cors');
 
 dotenv.config(process.env.ENV_PATH ? {path:process.env.ENV_PATH} : undefined);
 
 
-import { exec } from 'child_process';
-import { runInThisContext } from 'vm';
-import { create } from 'domain';
-import { readdirSync } from 'fs';
+const { exec } = require('child_process');
+const { runInThisContext } = require('vm');
+const { create } = require('domain');
+const { readdirSync } = require('fs');
 
 const config = {
     accountName: 'HackBackBetter',
@@ -51,7 +51,7 @@ app.use(express.json({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hi there! I\'m the HackBackBetter Mail API. I power all of our email services, like our mailing list, registrations, vaccine verification, and test verification.');
+    res.send('Hi there! I\'m the HackBackBetter Mail API. I power all of our email services, like our mailing list, registrations, and forms verification.');
 });
 
 app.use('/v1/authed', (req, res, next) => {
