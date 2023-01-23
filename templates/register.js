@@ -1,14 +1,17 @@
 export const required = ["firstName"];
 
-export const template = ({ firstName }) => `Thanks for registering, ${firstName}! <br/><br/> We'll reach out to you soon to sign the event liability waiver. In the meantime, join our <a href="https://discord.hackbackbetter.live>Discord server</a>!
+export const template = ({ firstName }) => `Thanks for registering, ${firstName}! <br/><br/> We'll reach out to you soon to sign the event liability waiver. In the meantime, join our <a href="https://discord.hackbackbetter.live">Discord server</a>!
 <br/>
 <br/>
 Best,
 <br/>
 Ruien & the HackBackBetter Team
 <br/>
+<br/>
+<br/>
+<br/>
 <a href="https://hackbackbetter.live">
-<img src="https://cdn.hackbackbetter.live/logo-full-light.png" width="300" />
+<img src="https://cdn.hackbackbetter.live/logo-full-light.png" width="100px" />
 </a>
 <br/>
 <br/>

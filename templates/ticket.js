@@ -1,6 +1,6 @@
 export const required = ["firstName", "imageLink"];
 
-export const template = ({ firstName, imageLink }) => `A Hack OC ticket for ${firstName} has appeared! Your vaccination status and COVID-19 test have been verified.
+export const template = ({ firstName, imageLink }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
 <br/>
 <br/>
 <center>
@@ -13,19 +13,19 @@ export const template = ({ firstName, imageLink }) => `A Hack OC ticket for ${fi
 You'll use this ticket to get into the event, so we recomend you take a screenshot or save the image.
 <br/>
 <br/>
-Cheers,
+Best,
 <br/>
-Ian & the Hack OC team
+Ruien & the HackBackBetter team
 <br/>
-<a href="https://hackoc.org">
-<img src="https://hackoc.org/logo-full-light.png" width="300" />
+<a href="https://hackbackbetter.live">
+<img src="https://cdn.hackbackbetter.live/logo-full-light.png" width="100" />
 </a>
 <br/>
 <br/>
 <small>We value your privacy and we'll never track whether you read or open our emails.</small>`;
 
 
-export const text = ({ firstName, imageLink }) => `A Hack OC ticket for ${firstName} has appeared! Your vaccination status and COVID-19 test have been verified.
+export const text = ({ firstName, imageLink }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
 
 You can download it here: ${imageLink}
 This is your ticket, ${firstName}. Don't share it with anyone else!
@@ -34,12 +34,12 @@ You'll use this ticket to get into the event, so we recomend you take a screensh
 
 
 Cheers,
-Ian & the Hack OC team
+Ruien & the HackBackBetter team
 
 -----
 We value your privacy and we'll never track whether you read or open our emails.`;
 
-export const subject = () => `Your Hack OC ticket is here!`;
+export const subject = () => `Your HackbackBetter ticket is here!`;
 
 
 export default { template, subject, text, required }

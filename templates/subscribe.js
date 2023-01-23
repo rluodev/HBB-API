@@ -10,7 +10,7 @@ Best,
 The HackBackBetter team
 <br/>
 <a href="https://hackbackbetter.live">
-<img src="https://cdn.hackbackbetter.live/logo-full-light.png" width="300" />
+<img src="https://cdn.hackbackbetter.live/logo-full-light.png" width="100" />
 </a>
 <br/>
 <br/>
