@@ -110,8 +110,9 @@ app.get('//v1/unauthed/subscribe/webhook', async (req, res) => {
         }
     });
     const { records } = await response.json();
-
-    console.log(records);
+    for (const rec of records) {
+        console.log(rec.fields);
+    }
     let emailsSent = 0;
     for (const record of records.filter(record => !record?.fields?.Notification)) {
         const email = record?.fields?.Email;
