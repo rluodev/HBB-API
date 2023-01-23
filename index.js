@@ -63,30 +63,33 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hi there! I\'m the HackBackBetter Mailroom. I power all of our email services, like our mailing list, registrations, and forms verification.');
 });
+app.get('//', (req, res) => {
+    res.send('Hi there! I\'m the HackBackBetter Mailroom. I power all of our email services, like our mailing list, registrations, and forms verification.');
+});
 
-app.use('/v1/authed', (req, res, next) => {
+app.use('//v1/authed', (req, res, next) => {
     const auth = req.header('Authorization');
     const valid = auth?.startsWith('Bearer hoc-m-') && ('HOC-M-' + crypto.createHash('sha512').update(auth.substring(13)).digest('hex')).toUpperCase() == 'HOC-M-BF12DDF078949BA5AC196FFF7D63F4EA2EE3065E09C4C1B6C7505C7C991D857E04373731A5E1D02966CF5DD006312FD8CD835BCCCEA3C69881837E2BBB080C83';
     if (!valid) return res.status(401).send('Unauthorized');
     next();
 });
 
-app.get('/v1/authed', (req, res) => {
+app.get('//v1/authed', (req, res) => {
     res.send('Authed');
 });
 
-app.get('/v1/authed/templates', (req, res) => {
+app.get('//v1/authed/templates', (req, res) => {
 	res.json(Object.keys(config.messages));
 });
 
-app.get('/v1/authed/templates/:template', (req, res) => {
+app.get('//v1/authed/templates/:template', (req, res) => {
 	const { template } = req.params;
 	if (!config.messages[template]) return res.json({ error: "Template not found" });
 
 	return res.json({ required: config.messages[template].required });
 });
 
-app.post('/v1/authed/deliver/:message', async (req, res) => {
+app.post('//v1/authed/deliver/:message', async (req, res) => {
     const { message } = req.params;
     if (!config.messages[message]) return res.status(404).send('Message not found');
     const template = config.messages[message];
@@ -96,7 +99,7 @@ app.post('/v1/authed/deliver/:message', async (req, res) => {
     res.json(results);
 });
 
-app.get('/v1/unauthed', (req, res) => {
+app.get('//v1/unauthed', (req, res) => {
     res.send('No authentication needed.');
 });
 
