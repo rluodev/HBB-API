@@ -1,17 +1,27 @@
-import nodemailer from 'nodemailer';
+/*import nodemailer from 'nodemailer';
 import express from 'express';
 import dotenv from 'dotenv';
 import crypto from 'crypto';
 import fetch from 'node-fetch';
-import cors from 'cors';
+import cors from 'cors';*/
+const nodemailer = require('nodemailer')
+const express = require('express')
+const dotenv = require('dotenv')
+const crypto = require('crypto')
+const fetch = require('node-fetch')
+const cors = require('cors')
 
-dotenv.config(process.env.ENV_PATH ? {path:process.env.ENV_PATH} : undefined);
+dotenv.config(process.env.ENV_PATH ? {path:process.env.ENV_PATH} : undefined)
 
 
-import { exec } from 'child_process';
+/*import { exec } from 'child_process';
 import { runInThisContext } from 'vm';
 import { create } from 'domain';
-import { readdirSync } from 'fs';
+import { readdirSync } from 'fs';*/
+const { exec } = require('child_process')
+const { runInThisContext } = require('vm')
+const { create } = require('domain')
+const { readdirSync } = require('fs')
 
 const config = {
     accountName: 'HackBackBetter',
@@ -24,7 +34,7 @@ const config = {
     },
     replyTo: 'info@hackbackbetter.live',
     messages: {}
-};
+}
 
 const transporter = nodemailer.createTransport({
     auth: {
@@ -32,7 +42,7 @@ const transporter = nodemailer.createTransport({
         pass: config.accountPassword
     },
     ...config.mailServer
-});
+})
 
 async function send (data, { template, subject, text }) {
     let info = await transporter.sendMail({
