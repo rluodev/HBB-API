@@ -7,21 +7,22 @@ import cors from 'cors';
 
 dotenv.config(process.env.ENV_PATH ? {path:process.env.ENV_PATH} : undefined);
 
+
 import { exec } from 'child_process';
 import { runInThisContext } from 'vm';
 import { create } from 'domain';
 import { readdirSync } from 'fs';
 
 const config = {
-    accountName: 'HackBackBetter',
-    accountEmail: 'noreply@hackbackbetter.live',
+    accountName: 'Hack OC',
+    accountEmail: 'noreply@hackoc.org',
     accountPassword: process.env.EMAIL_PASSWORD,
     mailServer: {
-        host: 'mail.hackbackbetter.live',
+        host: 'smtp.gmail.com',
         post: 465,
         secure: true
     },
-    replyTo: 'info@hackbackbetter.live',
+    replyTo: 'team@hackoc.org',
     messages: {}
 };
 
@@ -50,7 +51,7 @@ app.use(express.json({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hi there! I\'m the HackBackBetter Mail API. I power all of our email services, like our mailing list, registrations, vaccine verification, and test verification.');
+    res.send('Hi there! I\'m the Hack OC Mailroom. I power all of our email services, like our mailing list, registrations, vaccine verification, and test verification. I\'m also open source! Check out https://github.com/hackoc/mail.');
 });
 
 app.use('/v1/authed', (req, res, next) => {
@@ -129,7 +130,7 @@ app.get('/v1/unauthed/subscribe/webhook', async (req, res) => {
 });
 
 app.get('/v1/webhook', (req, res) => {
-    res.redirect(`https://api.hackbackbetter.live/v1/unauthed/subscribe/webhook`);
+    res.redirect(`http://mail2.hackoc.org:8081/v1/unauthed/subscribe/webhook`);
 });
 
 (async () => {
