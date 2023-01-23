@@ -142,7 +142,7 @@ app.get('/v1/unauthed/subscribe/webhook', async (req, res) => {
     res.send(`${emailsSent} email(s) sent out.`);
 });
 
-app.get('/v1/webhook', (req, res) => {
+app.get('//v1/webhook', (req, res) => {
     res.redirect(`http://api.hackbackbetter.live/mail/v1/unauthed/subscribe/webhook`);
 });
 
