@@ -24,7 +24,7 @@ Ruien & the HackBackBetter team
 <br/>
 <br/>
 <small>We value your privacy and will never track whether you read or open our emails.</small>
-<small>If you would like to cancel your registration and be removed from receiving further updates, please go to https://hackbackbetter.live/cancelReg?regID=${uuid}. Note that this will invalidate your ticket.</small>`;
+<small>If you would like to cancel your registration and be removed from receiving further updates, please visit <a href="https://hackbackbetter.live/cancelReg?regID=${uuid}">this link</a>. Note that this will invalidate your ticket.</small>`;
 
 
 export const text = ({ firstName, imageLink, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.

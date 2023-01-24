@@ -14,7 +14,7 @@ Ruien & the HackBackBetter Team
 <br/>
 <br/>
 <small>We value your privacy and will never track whether you read or open our emails.</small>
-<small>If you would like to cancel your registration and be removed from receiving further updates, please go to https://hackbackbetter.live/cancelReg?regID=${uuid}.</small>`;
+<small>If you would like to cancel your registration and be removed from receiving further updates, please visit <a href="https://hackbackbetter.live/cancelReg?regID=${uuid}">this link</a>.</small>`;
 
 export const text = ({ firstName, uuid }) => `Thanks for registering, ${firstName}!
 
