@@ -2,7 +2,7 @@ import crypto from 'crypto';
 
 export const required = ["email"];
 
-export const template = ({ email }) => `Thanks for subscribing to HackBackBetter! We're almost ready to open up registrations, so expect an email from us in the near future. For now, you can <a href="https://discord.hackbackbetter.live/">join our Discord server</a> and chat with other participants.
+export const template = ({ email }) => `Thanks for subscribing to HackBackBetter! Our registrations are open, and you can visit <a href="https://hackbackbetter.live/register">this link</a> to register. You can also <a href="https://discord.hackbackbetter.live/">join our Discord server</a> and chat with other participants.
 <br/>
 <br/>
 Best,
