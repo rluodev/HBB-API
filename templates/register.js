@@ -16,7 +16,7 @@ Ruien & the HackBackBetter Team
 <small>We value your privacy and will never track whether you read or open our emails.</small>
 <small>If you would like to cancel your registration and be removed from receiving further updates, please go to https://hackbackbetter.live/cancelReg?regID=${uuid}.</small>`;
 
-export const text = ({ firstName }) => `Thanks for registering, ${firstName}!
+export const text = ({ firstName, uuid }) => `Thanks for registering, ${firstName}!
 
 We'll reach out to you soon to sign the event liability waiver. In the meantime, join our Discord server (https://discord.hackbackbetter.live)!
 Best,
