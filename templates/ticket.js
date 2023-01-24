@@ -1,6 +1,6 @@
-export const required = ["firstName", "imageLink"];
+export const required = ["firstName", "imageLink", "uuid"];
 
-export const template = ({ firstName, imageLink }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
+export const template = ({ firstName, imageLink, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
 <br/>
 <br/>
 <center>
@@ -23,10 +23,11 @@ Ruien & the HackBackBetter team
 </a>
 <br/>
 <br/>
-<small>We value your privacy and will never track whether you read or open our emails.</small>`;
+<small>We value your privacy and will never track whether you read or open our emails.</small>
+<small>If you would like to cancel your registration and be removed from receiving further updates, please go to https://hackbackbetter.live/cancelTix?ticketID=${uuid}. Note that this will invalidate your ticket.</small>`;
 
 
-export const text = ({ firstName, imageLink }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
+export const text = ({ firstName, imageLink, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
 
 You can download it here: ${imageLink}
 This is your ticket, ${firstName}. Don't share it with anyone else!
@@ -38,7 +39,8 @@ Cheers,
 Ruien & the HackBackBetter team
 
 -----
-We value your privacy and will never track whether you read or open our emails.`;
+We value your privacy and will never track whether you read or open our emails.
+If you would like to cancel your registration and be removed from receiving further updates, please go to https://hackbackbetter.live/cancelTix?ticketID=${uuid}. Note that this will invalidate your ticket.`;
 
 export const subject = () => `Your HackbackBetter ticket is here!`;
 
