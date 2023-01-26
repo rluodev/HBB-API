@@ -1,10 +1,10 @@
-export const required = ["firstName", "imageLink", "uuid"];
+export const required = ["firstName", "uuid"];
 
-export const template = ({ firstName, imageLink, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
+export const template = ({ firstName, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
 <br/>
 <br/>
 <center>
-<img src="${imageLink}" style="width: 500px; max-width: 100%;" />
+<img src="https://quickchart.io/qr?text=${uuid}4&light=1e1682&dark=ca0e40&ecLevel=Q&size=300&centerImageUrl=https://cdn.hackbackbetter.live/small-logo.png" style="width: 300px; max-width: 100%;" />
 <br />
 <small>This is your ticket, ${firstName}. Don't share it with anyone else!</small>
 </center>
@@ -27,9 +27,9 @@ Ruien & the HackBackBetter team
 <small>If you would like to cancel your registration and be removed from receiving further updates, please visit <a href="https://hackbackbetter.live/cancelReg?regID=${uuid}">this link</a>. Note that this will invalidate your ticket.</small>`;
 
 
-export const text = ({ firstName, imageLink, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
+export const text = ({ firstName, uuid }) => `A HackBackBetter ticket for ${firstName} has appeared! Your submitted forms have been verified.
 
-You can download it here: ${imageLink}
+You can download it here: https://quickchart.io/qr?text=${uuid}4&light=1e1682&dark=ca0e40&ecLevel=Q&size=300&centerImageUrl=https://cdn.hackbackbetter.live/small-logo.png
 This is your ticket, ${firstName}. Don't share it with anyone else!
 
 You'll use this ticket to get into the event, so we recomend you take a screenshot or save the image.
