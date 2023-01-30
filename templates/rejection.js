@@ -31,6 +31,6 @@ Ruien & the HackBackBetter team
 We value your privacy and will never track whether you read or open our emails.
 If you would like to remove your contact information from our list, please go to https://hackbackbetter.live/cancelReg?regID=${uuid}.`;
 
-export const subject = () => `[IMPORTANT] Application rejected | HackBackBetter 2023!`;
+export const subject = () => `[IMPORTANT] Application rejected | HackBackBetter 2023`;
 
 export default { template, subject, text, required }
