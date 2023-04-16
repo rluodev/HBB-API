@@ -1,6 +1,6 @@
 export const required = ["firstName", "uuid"];
 
-export const template = ({ firstName, uuid }) => `Thanks for registering, ${firstName}! <br/><br/> We'll reach out to you soon to sign the event liability waiver. In the meantime, join our <a href="https://discord.hackbackbetter.live">Discord server</a>!
+export const template = ({ firstName, uuid }) => `Thanks for registering, ${firstName}! <br/><br/> Due to capacity restrictions, we're waitlisting registrants. We'll email you when/if we have available capacity. In the meantime, join our <a href="https://discord.hackbackbetter.live">Discord server</a>!
 <br/>
 <br/>
 Best,
@@ -18,7 +18,7 @@ Ruien & the HackBackBetter Team
 
 export const text = ({ firstName, uuid }) => `Thanks for registering, ${firstName}!
 
-We'll reach out to you soon to sign the event liability waiver. In the meantime, join our Discord server (https://discord.hackbackbetter.live)!
+Due to capacity restrictions, we're waitlisting registrants. We'll email you when/if we have available capacity. In the meantime, join our Discord server (https://discord.hackbackbetter.live)!
 Best,
 Ruien & the HackBackBetter team
 -----
